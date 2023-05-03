@@ -150,21 +150,27 @@ describe('modulus', () => {
 
 describe('even', () => {
 
-  test('can check positive numbers', () => {
+  test('can check positive even number', () => {
     expected = true;
     actual = even(12);
     expect(actual).toBe(expected);
   });
 
-  test('can check negative numbers', () => { 
+  test('can check negative even number', () => { 
     expected = true;
-    actual = even(1000);
+    actual = even(-26);
     expect(actual).toBe(expected);
   });
 
-  test('can check number that is odd', () => { 
+  test('can check positive odd number', () => { 
     expected = false;
     actual = even(53);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check negative odd number', () => { 
+    expected = false;
+    actual = even(-31);
     expect(actual).toBe(expected);
   });
 
@@ -172,21 +178,27 @@ describe('even', () => {
 
 describe('odd', () => {
 
-  test('can check positive numbers', () => {
+  test('can check positive odd number', () => {
     expected = true;
     actual = odd(11);
     expect(actual).toBe(expected);
   });
 
-  test('can check negative numbers', () => { 
+  test('can check negative odd number', () => { 
     expected = true;
-    actual = odd(333);
+    actual = odd(-33);
     expect(actual).toBe(expected);
   });
 
-  test('can check number that is even', () => { 
+  test('can check positive even number', () => { 
     expected = false;
     actual = odd(48);
+    expect(actual).toBe(expected);
+  });
+
+  test('can check negative even number', () => { 
+    expected = false;
+    actual = odd(-62);
     expect(actual).toBe(expected);
   });
 
